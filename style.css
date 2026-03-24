@@ -1,0 +1,160 @@
+body{
+font-family:Arial;
+background:#f2f2f2;
+margin:0;
+}
+
+h1,h2{
+text-align:center;
+}
+
+.container{
+width:1400px;
+margin:auto;
+}
+
+/* HEADER */
+
+.header{
+display:grid;
+grid-template-columns:200px repeat(6,1fr);
+background:#f7941d;
+color:white;
+font-weight:bold;
+text-align:center;
+padding:14px 0;
+}
+
+/* SCHEMA */
+
+.schemaRow{
+display:grid;
+grid-template-columns:200px repeat(12,1fr);
+gap:6px;
+margin-top:6px;
+}
+
+.gameInput{
+height:30px;
+}
+
+.cell{
+height:45px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:18px;
+border-radius:4px;
+cursor:pointer;
+}
+
+/* ronde kleuren */
+
+.r1{background:#e9c29c;}
+.r2{background:#e7c7a4;}
+.r3{background:#e4d7bb;}
+.r4{background:#c9c9d7;}
+.r5{background:#c6b7db;}
+.r6{background:#b9b9d7;}
+
+.selected{
+border:3px solid red;
+border-radius:50%;
+}
+
+/* SCORE TABEL */
+
+.scoreTitle{
+text-align:center;
+font-size:24px;
+margin:40px 0 10px;
+}
+
+.scoreHeader{
+display:grid;
+grid-template-columns:200px repeat(6,1fr) 1fr;
+background:#f7941d;
+color:white;
+padding:14px 0;
+text-align:center;
+font-weight:bold;
+}
+
+.scoreRow{
+display:grid;
+grid-template-columns:200px repeat(6,1fr) 1fr;
+gap:6px;
+margin-top:6px;
+}
+
+.scoreCell{
+height:40px;
+background:#e9c29c;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:4px;
+}
+
+.total{
+background:#c9c9d7;
+font-weight:bold;
+}
+
+.teamName{
+display:flex;
+align-items:center;
+padding-left:10px;
+}
+
+.popup{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.4);
+display:none;
+align-items:center;
+justify-content:center;
+}
+
+.popupBox{
+background:white;
+padding:30px;
+border-radius:10px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+.popupBox button{
+display:block;
+width:200px;
+margin:10px auto;
+padding:10px;
+font-size:16px;
+cursor:pointer;
+border:none;
+border-radius:6px;
+background:#f7941d;
+color:white;
+}
+
+.popupBox button:hover{
+background:#e68000;
+}
+
+.win{
+background:#8ed48e !important;
+border:3px solid #2c8a2c;
+}
+
+.lose{
+background:#f3a6a6 !important;
+border:3px solid #b33636;
+}
+
+.draw{
+background:#ffe48c !important;
+border:3px solid #caa300;
+}

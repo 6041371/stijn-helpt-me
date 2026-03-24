@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Flitz Schema - Room kiezen</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .room-box { max-width: 350px; margin: 80px auto; padding: 32px; background: #fff; border-radius: 12px; box-shadow: 0 2px 12px #0001; text-align: center; }
+    .room-box input { width: 80%; padding: 8px; margin: 12px 0; }
+    .room-box button { padding: 8px 24px; margin: 8px; }
+  </style>
+</head>
+<body>
+  <div class="room-box">
+    <h2>Flitz Schema</h2>
+    <input id="roomName" placeholder="Room naam" />
+    <div>
+      <button onclick="goToRoom('create')">Create Room</button>
+      <button onclick="goToRoom('join')">Join Room</button>
+    </div>
+  </div>
+  <script>
+    function goToRoom(type) {
+      const room = document.getElementById('roomName').value.trim();
+      if(!room) { alert('Vul een room naam in!'); return; }
+      // Stuur door naar 12.php met room parameter
+      window.location.href = '12.php?room=' + encodeURIComponent(room);
+    }
+  </script>
+</body>
+</html>
